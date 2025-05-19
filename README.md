@@ -1,4 +1,4 @@
-# 🌐 Gabriel Alderige - Portfólio Pessoal
+# 🌐 Site com Spline em 3D
 
 Este é o projeto do site pessoal de **Gabriel Alderige**, Web Designer e Desenvolvedor Web focado em soluções estratégicas para negócios digitais.
 
