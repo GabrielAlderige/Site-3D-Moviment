@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/*Fundo e desfoque efeito*/
+
+.image-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.desfoque{
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -2;
+}
+
+
+/*CONTAINER*/
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index: 999;
+}
+
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+
+
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav a:hover{
+    color: #a7a7a7;
+}
+
+
+.but-contato{
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+
+.but-contato:hover{
+    background-color: white;
+}
+
+
+/*MAIN CONTENT*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+
+.content{
+    max-width: 40rem;
+    margin: 10%;
+    z-index: 999;
+}
+
+
+.tag-caixa{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #adadad, #0272d4, #075091, #228ce9, #064e8d, #adadad);
+    background-size: 200%;
+    animation: animation-gradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animation-gradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+
+.tag-caixa .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+
+.tag-caixa .tag:hover{
+    color: #0272d4;
+}
+
+
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 1.7rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.486);
+}
+
+
+.descricao{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: gray;
+}
+
+
+.butoes{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.sobre-o-trabalho{
+    text-decoration: none;
+    color: #0272d4;
+    border: 1px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: backgroud-color 0.2s ease;
+}
+
+
+.sobre-o-trabalho:hover{
+    background-color: #1a1a1a;
+}
+
+
+.orcamento-agora{
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: background-color0.2s ease;
+}
+
+
+.orcamento-agora:hover{
+    background-color: gray;
+}
+
+
+.saturno{
+    position: absolute;
+    top: 0;
+    right: -20%;
+    margin-top: 4%;
+}
+
+
+
+/* === TELAS MAIORES QUE 1300px (default já está no estilo base) === */
+
+
+/* === ENTRE 1200px E 1300px === */
+@media (max-width: 1300px) {
+    header {
+      padding: 1rem 3rem;
+    }
+  
+    .content {
+      margin: 6% 3rem;
+    }
+
+  }
+  
+  
+  /* === ENTRE 1024px E 1200px === */
+  @media (max-width: 1200px) {
+    header {
+      padding: 1rem 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    nav {
+      margin-left: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .content {
+      margin: 2rem auto;
+      text-align: center;
+    }
+  
+    .content h1 {
+      font-size: 3rem;
+    }
+  
+    .descricao {
+      font-size: 1.1rem;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .butoes {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .saturno {
+      display: none;
+    }
+  
+    .tag-caixa {
+      margin: 0 auto;
+    }
+  }
+  
+  
+  /* === ENTRE 800px E 1024px === */
+  @media (max-width: 1024px) and (min-width: 800px) {
+    header {
+      padding: 1rem 2rem;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    header h1{
+      text-align: center;
+    
+    }
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-left: 0;
+    }
+  
+    .content {
+      margin: 2rem auto;
+      text-align: center;
+    }
+  
+    .content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .descricao {
+      font-size: 1rem;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .butoes {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+    }
+  
+    .saturno {
+      display: none;
+    }
+  
+    .tag-caixa {
+      margin: 0 auto;
+    }
+  }
+  
+  
+  /* === ATÉ 768px (CELULAR) === */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    header h1{
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 1rem;
+      margin-left: 0;
+    }
+  
+    .content {
+      margin: 2rem 1rem;
+      text-align: center;
+    }
+  
+    .content h1 {
+      font-size: 2rem;
+    }
+  
+    .descricao {
+      font-size: 0.95rem;
+    }
+  
+    .butoes {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .saturno {
+      display: none;  /* Remover Saturno em telas menores */
+    }
+  
+    .tag-caixa {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
